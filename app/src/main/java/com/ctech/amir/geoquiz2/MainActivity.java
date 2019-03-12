@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
     public void onSaveInstanceState(Bundle saveInstanceState) {
     super.onSaveInstanceState(savedInstanceState);
     Log.i(TAG, "onSaveInstanceState");
-    saveInstanceState.put
+    saveInstanceState.putInt(KEY_INDEX, mCurrentIndex);
     }
 
     @Override
