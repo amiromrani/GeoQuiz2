@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    private static final String KEY_INDEX = "index";
 
     private Button mTrueButton;
     private Button mFalseButton;
@@ -111,6 +112,13 @@ public class MainActivity extends AppCompatActivity {
     public void onPause() {
         super.onPause();
         Log.d(TAG, "onPause has been called!");
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle saveInstanceState) {
+    super.onSaveInstanceState(savedInstanceState);
+    Log.i(TAG, "onSaveInstanceState");
+    saveInstanceState.put
     }
 
     @Override
