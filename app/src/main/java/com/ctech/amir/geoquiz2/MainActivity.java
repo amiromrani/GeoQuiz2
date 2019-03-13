@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle saveInstanceState) {
-    super.onSaveInstanceState(savedInstanceState);
+    super.onSaveInstanceState(saveInstanceState);
     Log.i(TAG, "onSaveInstanceState");
     saveInstanceState.putInt(KEY_INDEX, mCurrentIndex);
     }
@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
     // encapsulate the update question code so we don't have to copy and paste it:
     private void updateQuestion() {
+       Log.d(TAG, "updating question text", new Exception());
         int questionResourceId = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(questionResourceId);
     }
